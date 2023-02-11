@@ -20,7 +20,7 @@
 
 1. 姓名：吕文翰
 2. Github：[johnlui](https://github.com/johnlui)
-3. 职业：住范儿 CTO & 监事
+3. 职位：住范儿 CTO
 
 ### 版权声明
 
