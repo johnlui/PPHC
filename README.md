@@ -32,11 +32,11 @@
 ### 作者信息：
 
 1. 姓名：吕文翰
-2. Github：[johnlui](https://github.com/johnlui)
+2. GitHub：[johnlui](https://github.com/johnlui)
 3. 职位：住范儿 CTO
 
 ![公众号](https://lvwenhan.com/content/uploadfile/202301/79c41673579170.jpg)
 
 ### 版权声明
 
-本书版权归属于[吕文翰](https://github.com/johnlui)，供 Github 平台用户免费阅读。
+本书版权归属于[吕文翰](https://github.com/johnlui)，供 GitHub 平台用户免费阅读。
