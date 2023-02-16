@@ -177,7 +177,7 @@ Facebook 的用户不可谓不多，对高可用的投入不可谓不足，为�
 
 本系列文章一共十篇，超过八万字，对我自己来说也是一次很有价值的总结，不知道各位读者感觉如何呢？欢迎到下列位置留下你的评论：
 
-1. Github：https://github.com/johnlui/tech-epic/issues/1
+1. Github：[https://github.com/johnlui/tech-epic/issues/1](https://github.com/johnlui/PPHC/issues)
 2. 微博：https://weibo.com/balishengmuyuan
 2. 博客：https://lvwenhan.com/tech-epic/508.html
 
