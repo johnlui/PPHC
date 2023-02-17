@@ -37,6 +37,10 @@
 
 ![公众号](https://lvwenhan.com/content/uploadfile/202301/79c41673579170.jpg)
 
+### 在线浏览
+streamlit apps: https://sherry0429-pphc-main-p0otkm.streamlit.app/
+create by [sherry0429](https://github.com/sherry0429)
+
 ### 版权声明
 
 本书版权归属于[吕文翰](https://github.com/johnlui)，供 GitHub 平台用户免费阅读。
