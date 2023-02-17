@@ -9,7 +9,7 @@ IMAGE_HEIGHT = 400
 
 @st.cache_resource
 def load_base_dirs():
-    dirs = sort(os.listdir('.'))
+    dirs = sorted(os.listdir('.'))
     tmp_dir = []
     for path_name in dirs:
         if path_name.startswith('0'):
