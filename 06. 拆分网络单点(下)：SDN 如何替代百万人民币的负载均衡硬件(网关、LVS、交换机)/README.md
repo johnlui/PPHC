@@ -354,6 +354,8 @@ DPDK 是 Intel 开源的高性能网络数据处理框架，运行在用户态�
 
 下一篇文章，我们将直面最难以解决的单点：数据库以及它背后的存储，探寻`IOE`中最难去掉的那个`E`。
 
+> [高并发的哲学原理（七）-- 最难以解决的单点：数据库以及它背后的存储](https://github.com/johnlui/PPHC/tree/main/07.%20%E6%9C%80%E9%9A%BE%E4%BB%A5%E8%A7%A3%E5%86%B3%E7%9A%84%E5%8D%95%E7%82%B9%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BB%A5%E5%8F%8A%E5%AE%83%E8%83%8C%E5%90%8E%E7%9A%84%E5%AD%98%E5%82%A8)
+
 ### 参考资料
 
 1. Envoy 作者 Matt Klein 2017 年的一篇英文博客 Introduction to modern network load balancing and proxying https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236

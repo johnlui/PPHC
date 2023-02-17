@@ -170,5 +170,6 @@ pm.max_children = 500
 下一篇文章，我们将讨论基础设施层面的并发：虚拟机和 k8s 技术。同时我会继续现身说法，讲述我为自研团购秒杀系统设计的架构，我称它为百亿架构（年 GMV 百亿之前不用换架构）。
 
 
+> [高并发的哲学原理（三）-- 基础设施并发：虚拟机与 Kubernetes（k8s）](https://github.com/johnlui/PPHC/tree/main/03.%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B9%B6%E5%8F%91%EF%BC%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%20Kubernetes%EF%BC%88k8s%EF%BC%89)
 
 

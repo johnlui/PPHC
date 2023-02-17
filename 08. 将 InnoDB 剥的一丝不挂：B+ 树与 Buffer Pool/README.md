@@ -453,6 +453,8 @@ LRU 链表将数据分为`新生代`和`老生代`两个区域，分别占据`5/
 
 一万多字的 InnoDB 详解文章终于完成了，下一篇文章我们将在本文的基础上，细数四代分布式数据库的变迁：NewSQL、计算存储分离、Paxos、Shared-Nothing、列存储，并且详细分析国产数据库双雄 TiDB 和 OceanBase 的技术架构，看看市面上可用的这些分布式数据库，到底能不能支撑得住 500 万 QPS。
 
+> [高并发的哲学原理（九）-- 细数四代分布式数据库并拆解 TiDB 和 OceanBase（主从、中间件、KV、计算与存储分离、列存储、CAP定理）](https://github.com/johnlui/PPHC/tree/main/09.%20%E7%BB%86%E6%95%B0%E5%9B%9B%E4%BB%A3%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E6%8B%86%E8%A7%A3%20TiDB%20%E5%92%8C%20OceanBase%EF%BC%88%E4%B8%BB%E4%BB%8E%E3%80%81%E4%B8%AD%E9%97%B4%E4%BB%B6%E3%80%81KV%E3%80%81%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%AD%98%E5%82%A8%E5%88%86%E7%A6%BB%E3%80%81%E5%88%97%E5%AD%98%E5%82%A8%E3%80%81CAP%E5%AE%9A%E7%90%86%EF%BC%89)
+
 ### 参考资料
 
 1. mysql 最大建议行数 2000w, 靠谱吗？ https://my.oschina.net/u/4090830/blog/5559454

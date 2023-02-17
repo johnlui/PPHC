@@ -187,3 +187,4 @@ Facebook 的用户不可谓不多，对高可用的投入不可谓不足，为�
 2. 2021 年 Facebook 宕机事件 https://zh.wikipedia.org/wiki/2021%E5%B9%B4Facebook%E7%95%B6%E6%A9%9F%E4%BA%8B%E4%BB%B6
 3. 关于阿里云香港Region可用区C服务中断事件的说明 https://help.aliyun.com/noticelist/articleid/1061819219.html
 
+【全系列完结】
