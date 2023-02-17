@@ -122,7 +122,7 @@
 
 下一篇文章，我们将看到真实的 Apache 性能瓶颈与 Nginx 的性能优势，同时我会继续现身说法，讲述团购秒杀业务的故事。
 
-https://github.com/johnlui/PPHC/tree/main/02.%20Apache%20%E7%9A%84%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88%E4%B8%8E%20Nginx%20%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8A%BF
+> [Apache 的性能瓶颈与 Nginx 的性能优势](https://github.com/johnlui/PPHC/tree/main/02.%20Apache%20%E7%9A%84%E6%80%A7%E8%83%BD%E7%93%B6%E9%A2%88%E4%B8%8E%20Nginx%20%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8A%BF)
 
 ### 参考资料
 
