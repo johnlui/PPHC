@@ -173,7 +173,7 @@ Google Spanner 的推出代表着一个新时代到来了：基于分布式技�
 
 NewSQL 最大的特点就是使用非 B 树磁盘存储结构（一般为 LSM-Tree），在上面构筑一个兼容 SQL 常用语句和事务的兼容层，这样既可以享受大规模 LSM-Tree 集群带来的扩展性和高性能，也可以尽量少改动现有应用代码和开发习惯，把悲伤留给自己了属于是。
 
-目前比较常见的 NewSQL 有 ClustrixDB、NuoDB、VoltDB，国内的 TiDB 和 OceanBase 也属于 NewSQL，但他们俩有本质区别，下面的番外篇会讨论。
+目前比较常见的 NewSQL 有 ClustrixDB、NuoDB、VoltDB，国内的 TiDB 和 OceanBase 也属于 NewSQL，但他们俩有本质区别，我们下面会详细讨论。
 
 在 NewSQL 时代之后，随着云计算的兴起，云上数据库突然成为了市场的宠儿，市场占有率迅速上涨。它们其实都是对 MySQL 的改造，并不属于 NewSQL 范畴，下面我们认识一下他们。
 
