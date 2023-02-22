@@ -45,4 +45,6 @@
 
 ### 版权声明
 
-本书版权归属于[吕文翰](https://github.com/johnlui)，供 GitHub 平台用户免费阅读。
+本书版权归属于[吕文翰](https://github.com/johnlui)，采用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.zh-Hans) 协议开源，供 GitHub 平台用户免费阅读。
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.zh-Hans"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
