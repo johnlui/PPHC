@@ -22,37 +22,38 @@ Apache 支持三种进程模型：`prefork`、`worker` 和 `event`，在此我�
 
 1. prefork 是进程模式，需要消耗更多的内存，每次接到一段新的数据，需要使用 `select` 模型，遍历 `TCP连接数 x 进程数` 这么多次才能找到匹配的进程，在数千个 TCP 连接下，光是寻找线程就需要消耗掉一个 CPU 核心，单机性能达到极限，无法利用更多的 CPU 资源
 2. worker 是线程模式，依旧使用 `select` 模型来遍历 TCP 请求和线程，性能上限和 prefork 一致，区别是内存消耗量有了一些降低，初始 TCP 承载能力稍好，请求数突然增加的场景下，开新线程的速度反而比 prefork 更慢，且基础延迟比 prefork 模式更高
-3. event 模式采用和 Nginx 一致的 `epoll` 模型承载，理论上表现和 Nginx 一致，但由于 Apache 大概率和 mod_php（插件）模式的 PHP 一起部署，由于 PHP 阻塞运行的特性，性能和上面两兄弟并无明显区别。而且即便是 event 模式下的 Apache，性能依然远低于 Nginx。
+3. event 模式采用和 Nginx 一致的 `epoll` 模型承载，理论上表现和 Nginx 一致，但由于 Apache 大概率是和 mod_php（插件）模式的 PHP 一起部署，再加上 PHP 阻塞运行的特性，性能和上面两兄弟并无明显区别。因此即便是 event 模式下的 Apache，性能依然远低于 Nginx。
 
 接下来我们使用 jmeter 测试一下 prefork、worker、event 三种模式的性能。
 
-
 ## 压力测试
 
-
 ### 测试环境
+
 * 客户端：
-    * i5-10400 6 核 12 线程
-    * 32GB 内存
-    * 千兆有线网络
-    * 软件环境
-        * macOS
-        * Java 19.0.1
+  
+  * i5-10400 6 核 12 线程
+  * 32GB 内存
+  * 千兆有线网络
+  * 软件环境
+    * macOS
+    * Java 19.0.1
 
 * 服务端：
-    * 物理服务器 E5-2682V4 2.5GHz 16 核 32 线程 * 2 （阿里云 5 代 ECS 同款 CPU）256GB RAM
-    * 虚拟机 64 vCPU （赋予了虚拟机所有母鸡的 CPU 资源）
-    * 虚拟机内存 32GB
-    * 软件环境
-        * CentOS Stream release 9
-        * kernel 5.14.0-200.el9.x86_64  
-        * Apache/2.4.53
-        * Nginx/1.20.1
-        * PHP 8.0.26
-    * PHP 环境：
-        * Laravel 9.19
-        * 给默认路由增加 sleep 500ms 的代码，模拟数据库、Redis、RPC、cURL微服务等场景
-        * 执行 `php artisan optimize` 后测试
+  
+  * 物理服务器 E5-2682V4 2.5GHz 16 核 32 线程 * 2 （阿里云 5 代 ECS 同款 CPU）256GB RAM
+  * 虚拟机 64 vCPU （赋予了虚拟机所有母机的 CPU 资源）
+  * 虚拟机内存 32GB
+  * 软件环境
+    * CentOS Stream release 9
+    * kernel 5.14.0-200.el9.x86_64  
+    * Apache/2.4.53
+    * Nginx/1.20.1
+    * PHP 8.0.26
+  * PHP 环境：
+    * Laravel 9.19
+    * 给默认路由增加 sleep 500ms 的代码，模拟数据库、Redis、RPC、cURL微服务等场景
+    * 执行 `php artisan optimize` 后测试
 
 * 测试代码
 
@@ -74,6 +75,7 @@ return view('welcome');
     MaxRequestsPerChild  100000
 </IfModule>
 ```
+
 * php-fpm 配置
 
 ```tcl
@@ -81,7 +83,7 @@ pm = static
 pm.max_children = 500
 ```
 
-### 试验设计
+### 实验设计
 
 我们将测试三种配置下的性能表现差异：
 
@@ -94,22 +96,22 @@ pm.max_children = 500
 1. 客户端新线程开启后，每隔 5 秒发送一个请求
 2. jmeter 用 50 秒开 5000 个线程，持续压测 100 秒，最大请求 QPS 为 1000
 
-
 ### 为什么这么设计？
 
-单独对比 Nginx 和 Apache 性能的文章很多，数据结果也大同小异，无非是 Nginx 的 QPS 更高，但是为什么却没人回答，我本次的实验设计就是要回答这个问题。
-
+单独对比 Nginx 和 Apache 性能的文章很多，数据结果也大同小异，无非是 Nginx 的 QPS 更高，但是 **“为什么是这样？”** 却没人回答，我本次的实验设计就是要回答这个问题。
 
 #### Apache 标准模式：prefork + mod_php
+
 ![](https://qn.lvwenhan.com/2022-12-26-16720510490728.jpg)
 ![](https://qn.lvwenhan.com/2022-12-26-16720510753399.jpg)
 
 #### nginx + php-fpm
+
 ![](https://qn.lvwenhan.com/2022-12-26-16720511122515.jpg)
 ![](https://qn.lvwenhan.com/2022-12-26-16720511252218.jpg)
 
-
 #### nginx 反向代理 Apache 标准模式
+
 ![](https://qn.lvwenhan.com/2022-12-26-16720511439117.jpg)
 ![](https://qn.lvwenhan.com/2022-12-26-16720511638290.jpg)
 
@@ -130,14 +132,15 @@ pm.max_children = 500
 
 #### Nginx epoll 和 Apache prefork 模型相比，优势劣势如下：
 
-#### 优势
+##### 优势
+
 1. Nginx 每个 worker 进程可以 handle 上千个 TCP 连接，消耗很少的内存和 CPU 资源，可以让单台服务器承接比 Apache 多两个数量级的用户量，相比于 Apache 单机 5K 的 TCP 连接数上限（对应的是 2000 个在线用户），是一个巨大的进步
 2. Nginx 对 TCP 的复用使它非常善于应对海量客户端的直接连接，根据我的实测，在 HTTP 高并发下 Nginx 的活跃 TCP 连接数可以做到 Apache 的五分之一，而且用户量越高，复用效果越好
 3. 在架构上，基于 FastCGI 网络协议进行架构扩展，也可以更轻易地利用多台物理服务器的并行计算能力，提升整个系统的性能上限
 
-#### 劣势
-1. 在低负载下，Nginx 事件驱动的特性使得每个请求的响应时长比 Apache prefork 模式略长一些（14ms vs 9ms）
+##### 劣势
 
+1. 在低负载下，Nginx 事件驱动的特性使得每个请求的响应时长比 Apache prefork 模式略长一些（14ms vs 9ms）
 
 ### 我的真实经验
 
@@ -169,7 +172,4 @@ pm.max_children = 500
 
 下一篇文章，我们将讨论基础设施层面的并发：虚拟机和 k8s 技术。同时我会继续现身说法，讲述我为自研团购秒杀系统设计的架构，我称它为百亿架构（年 GMV 百亿之前不用换架构）。
 
-
 > [高并发的哲学原理（三）-- 基础设施并发：虚拟机与 Kubernetes（k8s）](https://github.com/johnlui/PPHC/tree/main/03.%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B9%B6%E5%8F%91%EF%BC%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%20Kubernetes%EF%BC%88k8s%EF%BC%89)
-
-
