@@ -35,13 +35,11 @@
 9. 细数四代分布式数据库并拆解 TiDB 和 OceanBase（主从、中间件、KV、计算与存储分离、列存储、CAP定理）
 10. 理论无限容量：站在地球表面
 
-#### 网页直接阅读：https://lvwenhan.com/tech-epic/499.html
-
 ### 作者信息：
 
 1. 姓名：吕文翰
 2. GitHub：[johnlui](https://github.com/johnlui)
-3. 职位：住范儿 CTO
+3. 职位：住范儿创始成员，CTO，监事
 
 ![公众号](https://lvwenhan.com/content/uploadfile/202301/79c41673579170.jpg)
 
