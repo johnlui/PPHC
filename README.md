@@ -6,6 +6,10 @@
 <h3 align="center">简称 <code>PPHC</code></h3>
 <hr>
 
+<p align="center">
+<a href="https://trendshift.io/repositories/4395" target="_blank"><img src="https://trendshift.io/api/badge/repositories/4395" alt="johnlui%2FPPHC | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</p>
+
 ### 阅读地址：https://pphc.lvwenhan.com
 
 **pdf 下载链接在网站右上角。**
