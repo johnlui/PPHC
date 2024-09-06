@@ -38,7 +38,7 @@ OceanBase 在建表时就需要设定数据分区规则，之后每一行数据�
 为了提升缓存命中率，OceanBase 设计了很多层内存缓存，尽全力避免了对磁盘的随机读取，只让 LSM-Tree 的磁盘承担它擅长的连续读任务，包子有肉不在褶上，商用环境中捶打过的软件就是不一样，如图 10-6 所示，功夫都在细节里：
 
 ![](https://qn.lvwenhan.com/2023-02-03-16753613663568.jpg)
-<center>图 10-6 TiDB 的缓存流程</center>
+<center>图 10-6 OceanBase 的缓存流程</center>
 
 1. BloomFilter Cache：布隆过滤器缓存
 2. MemTable：同时使用 B+ 树和 HashTable 作为内存引擎，分别处理不同的场景
