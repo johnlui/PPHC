@@ -30,7 +30,7 @@
       <p>
         <a href="https://item.jd.com/14642937.html" target="_blank">🛒 京东购买 ¥67.6</a>
         &nbsp;&nbsp;·&nbsp;&nbsp;
-        <a href="https://m.tb.cn/h.7E8uLLG?tk=kmHfUOPaxlF" target="_blank">✍️ 作者签名版 ¥55</a>
+        <a href="https://www.goofish.com/item?id=1019182611694&spm=widle.12011849.copy.detail&ut_sk=1.Y+pUni/Vez8DACytHIIjt4+h_21407387_1774694528870.copy.detail.1019182611694.785454909" target="_blank">✍️ 作者签名版 ¥55</a>
       </p>
     </td>
   </tr>
