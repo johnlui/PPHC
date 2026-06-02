@@ -7,328 +7,45 @@
 <hr>
 
 <p align="center">
-<a href="https://trendshift.io/repositories/4395" target="_blank"><img src="https://trendshift.io/api/badge/repositories/4395" alt="johnlui%2FPPHC | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/4395" target="_blank"><img src="https://trendshift.io/api/badge/repositories/4395" alt="johnlui%2FPPHC | Trendshift" width="250" height="55"/></a>
 </p>
 
-<style>
-.book-publication {
-    --book-surface: #fbfcfd;
-    --book-panel: #ffffff;
-    --book-border: rgba(30, 45, 55, 0.12);
-    --book-border-soft: rgba(30, 45, 55, 0.08);
-    --book-text: #1f2d33;
-    --book-muted: #65747b;
-    --book-faint: #7c8a91;
-    --book-accent: #2f6f83;
-    --book-warm: #a65f00;
+<h3>纸质书已经出版</h3>
 
-    margin: 26px 0 64px;
-    max-width: 910px;
-    padding: 24px;
-    border: 1px solid var(--book-border);
-    border-radius: 8px;
-    background: var(--book-surface);
-}
+实体书版本新增了 AI 架构、高可用、分布式理论与工程化体系等内容。
 
-.book-publication-head {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 22px;
-}
+**电子工业出版社**
 
-.book-publication h3 {
-    margin: 0;
-    color: var(--book-text);
-    font-size: calc(1.35rem - 3px);
-    font-weight: 700;
-    line-height: 1.35;
-}
-
-.book-publication-subtitle {
-    margin: 6px 0 0;
-    color: var(--book-muted);
-    font-size: calc(0.95rem - 3px);
-    line-height: 1.7;
-}
-
-.book-publication-badge {
-    flex: 0 0 auto;
-    padding: 4px 10px;
-    border: 1px solid var(--book-border-soft);
-    border-radius: 999px;
-    background: var(--book-panel);
-    color: var(--book-accent);
-    font-size: calc(0.82rem - 3px);
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.book-publication-grid {
-    display: grid;
-    grid-template-columns: minmax(180px, 230px) minmax(280px, 420px) minmax(0, 1fr) minmax(230px, 270px) minmax(0, 1fr);
-    align-items: stretch;
-    gap: 20px;
-}
-
-.book-cover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-}
-
-.book-cover img {
-    width: 100%;
-    max-width: 230px;
-    border: 1px solid var(--book-border-soft);
-    border-radius: 6px;
-}
-
-.book-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4px 0;
-}
-
-.book-copy-title {
-    margin: 0 0 12px;
-    color: var(--book-text);
-    font-size: calc(1rem - 3px);
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.book-copy ul {
-    display: grid;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.book-copy li {
-    position: relative;
-    padding-left: 18px;
-    color: #34464d;
-    font-size: calc(0.95rem - 3px);
-    line-height: 1.65;
-}
-
-.book-copy li::before {
-    content: "";
-    position: absolute;
-    top: 0.78em;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--book-accent);
-}
-
-.book-copy b {
-    color: var(--book-text);
-}
-
-.book-purchase-panel {
-    grid-column: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 14px;
-    padding: 16px;
-    border: 1px solid var(--book-border-soft);
-    border-radius: 8px;
-    background: var(--book-panel);
-}
-
-.book-purchase-qr {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    border: 1px solid var(--book-border-soft);
-    border-radius: 6px;
-    background: var(--book-panel);
-}
-
-.book-purchase-qr img {
-    width: 100%;
-    max-width: 176px;
-    aspect-ratio: 1;
-    display: block;
-}
-
-.book-purchase-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 12px;
-    height: 100%;
-}
-
-.book-purchase-kicker {
-    margin-bottom: 5px;
-    color: var(--book-faint);
-    font-size: calc(0.82rem - 3px);
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.book-purchase-title {
-    color: var(--book-text);
-    font-size: calc(1.08rem - 3px);
-    font-weight: 700;
-    line-height: 1.4;
-}
-
-.book-purchase-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 10px 0 12px;
-}
-
-.book-purchase-tags span {
-    padding: 3px 8px;
-    border: 1px solid rgba(166, 95, 0, 0.18);
-    border-radius: 999px;
-    background: #fff8e9;
-    color: var(--book-warm);
-    font-size: calc(0.78rem - 3px);
-    font-weight: 700;
-    line-height: 1.45;
-}
-
-.book-purchase-price {
-    color: var(--book-warm);
-    font-size: calc(1.1rem - 3px);
-    font-weight: 700;
-    line-height: 1.35;
-}
-
-.book-purchase-note {
-    margin: 7px 0 0;
-    color: var(--book-muted);
-    font-size: calc(0.9rem - 3px);
-    line-height: 1.65;
-}
-
-.book-trust-link {
-    margin: 0;
-    padding-top: 12px;
-    border-top: 1px solid var(--book-border-soft);
-    color: var(--book-faint);
-    font-size: calc(0.88rem - 3px);
-    line-height: 1.65;
-}
-
-.book-trust-link a {
-    color: var(--book-accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
-
-.book-trust-link a:hover {
-    color: var(--book-text);
-}
-
-@media (max-width: 980px) {
-    .book-publication-grid {
-        grid-template-columns: minmax(180px, 220px) 1fr;
-    }
-
-    .book-purchase-panel {
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: minmax(160px, 190px) 1fr;
-        align-items: center;
-    }
-}
-
-@media (max-width: 640px) {
-    .book-publication {
-        margin: 22px 0 54px;
-        padding: 18px;
-    }
-
-    .book-publication-head {
-        display: block;
-        margin-bottom: 18px;
-    }
-
-    .book-publication-badge {
-        display: inline-block;
-        margin-top: 10px;
-    }
-
-    .book-publication-grid,
-    .book-purchase-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .book-cover {
-        justify-content: flex-start;
-    }
-
-    .book-cover img {
-        max-width: 230px;
-    }
-
-    .book-copy {
-        padding: 0;
-    }
-
-    .book-purchase-qr img {
-        max-width: 200px;
-    }
-}
-</style>
-
-<div class="book-publication">
-    <div class="book-publication-head">
-        <div>
-            <h3>纸质书已经出版</h3>
-            <p class="book-publication-subtitle">实体书版本新增了 AI 架构、高可用、分布式理论与工程化体系等内容。</p>
-        </div>
-        <div class="book-publication-badge">电子工业出版社</div>
-    </div>
-    <div class="book-publication-grid">
-        <div class="book-cover">
-            <img src="./assets/book.jpg" alt="《高并发的哲学原理》实体书" />
-        </div>
-        <div class="book-copy">
-            <div class="book-copy-title">纸质书新增内容</div>
-            <ul>
-                <li>紧跟时代的 <b>"AI 架构"</b> 与前沿技术</li>
-                <li>系统化的 <b>"高可用"</b> 与 <b>"分布式理论"</b></li>
-                <li>完整阐述了 <b>"工程化体系"</b> 与 <b>"方法论"</b></li>
-                <li>更加硬核的 <b>"底层原理"</b> 深挖</li>
-                <li>实战项目 <b>"全栈式"</b> 落地</li>
-            </ul>
-        </div>
-        <div class="book-purchase-panel" aria-label="纸质书主推购买渠道">
-            <div class="book-purchase-qr">
-                <img src="./assets/signature-purchase-qrcode.png" alt="作者直销作者签名版购买二维码" />
-            </div>
-            <div class="book-purchase-content">
-                <div>
-                    <div class="book-purchase-title">全新塑封 / 作者签名版</div>
-                    <div class="book-purchase-tags">
-                      <span>作者直销</span>
-                    </div>
-                    <div class="book-purchase-price">扫码购买 ¥55</div>
-                    <p class="book-purchase-note"></p>
-                </div>
-                <p class="book-trust-link">
-                    <a href="https://item.jd.com/14642937.html" target="_blank">🛒 京东购买 ¥67.6</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<table>
+  <tr>
+    <td width="240" valign="top" align="center">
+      <img width="230" src="./assets/book.jpg" alt="《高并发的哲学原理》实体书" />
+    </td>
+    <td width="420" valign="top">
+      <strong>纸质书新增内容</strong>
+      <br />
+      <br />
+      <ul>
+        <li>紧跟时代的 <b>"AI 架构"</b> 与前沿技术</li>
+        <li>系统化的 <b>"高可用"</b> 与 <b>"分布式理论"</b></li>
+        <li>完整阐述了 <b>"工程化体系"</b> 与 <b>"方法论"</b></li>
+        <li>更加硬核的 <b>"底层原理"</b> 深挖</li>
+        <li>实战项目 <b>"全栈式"</b> 落地</li>
+      </ul>
+    </td>
+    <td width="240" valign="top" align="center">
+      <img width="176" src="./assets/signature-purchase-qrcode.png" alt="作者直销作者签名版购买二维码" />
+      <br />
+      <strong>全新塑封 / 作者签名版</strong>
+      <br />
+      作者直销
+      <br />
+      <strong>扫码购买 ¥55</strong>
+      <br />
+      <a href="https://item.jd.com/14642937.html" target="_blank">🛒 京东购买 ¥67.6</a>
+    </td>
+  </tr>
+</table>
 
 ### 开源版本阅读地址：https://pphc.lvwenhan.com
 
@@ -443,4 +160,4 @@
 
 本书版权归属于[吕文翰](https://github.com/johnlui)，采用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.zh-Hans) 协议开源，供 GitHub 平台用户免费阅读。
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.zh-Hans"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.zh-Hans"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
